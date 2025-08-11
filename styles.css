@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --vermelho-timao: #E10600; /* vermelho vibrante do Corinthians */
+    --vermelho-escuro: #9B0000; /* vermelho mais escuro para hover e sombras */
+    --preto-fundo: #000000; /* preto puro para fundo */
+    --cinza-escuro: #1A1A1A; /* cinza quase preto para seções */
+    --cinza-medio: #4D4D4D; /* cinza para formulários e fundos secundários */
+    --cinza-claro: #BFBFBF; /* texto claro para hover */
+    
+    --texto-branco: #FFFFFF; /* branco puro para texto */
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--preto-fundo);
+    color: var(--texto-branco);
+}
+
+header {
+    background-color: #000000cc; /* preto translúcido */
+    border-bottom: 2px solid var(--vermelho-timao);
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+.nav-link {
+    color: var(--vermelho-timao);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--cinza-claro);
+    text-decoration: underline;
+}
+
+.inicio-fundo {
+    background-image: url('img/arena-corinthians-bg.jpg'); /* imagem da Arena Corinthians */
+    background-size: cover;
+    background-position: center;
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 30px var(--vermelho-timao);
+}
+
+.img-inicio {
+    position: absolute;
+    right: 2rem;
+    top: 15rem;
+    max-width: 40rem;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px var(--vermelho-escuro));
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.botao-inicio {
+    background-color: var(--vermelho-timao);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    font-weight: 700;
+    color: var(--texto-branco);
+    transition: background-color 0.3s ease;
+}
+
+.botao-inicio:hover, .botao-inicio:focus {
+    background-color: var(--vermelho-escuro);
+    color: var(--texto-branco);
+}
+
+.display-4 {
+    text-shadow: -5px 5px var(--vermelho-timao);
+    font-family: 'Lemon', cursive;
+}
+
+#historia {
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: url('img/corinthians-symbol1.png') top right no-repeat,
+        url('img/corinthians-symbol2.png') bottom left no-repeat;
+    background-size: 180px 180px;
+}
+
+#historia .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--vermelho-timao);
+    text-shadow: 1px 1px 3px var(--vermelho-escuro);
+}
+
+#galeria {
+    background-color: var(--cinza-escuro);
+    padding: 3rem 0;
+    border-radius: 30px;
+    box-shadow: 0 0 15px var(--vermelho-timao);
+}
+
+.fundo-galeria {
+    background: url('img/corinthians-fundo.png') bottom right no-repeat;
+    background-size: 180px 180px;
+}
+
+#contato {
+    background-image: url('img/arena-corinthians-noite.jpg'); /* imagem da arena à noite */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+}
+
+.formulario {
+    background-color: var(--cinza-medio);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--vermelho-timao);
+    font-weight: bold;
+    color: var(--texto-branco);
+}
+
+.formulario label {
+    color: var(--vermelho-timao);
+}
+
+.formulario button {
+    background-color: var(--vermelho-timao);
+    border: none;
+    font-weight: bold;
+    color: var(--texto-branco);
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover, .formulario button:focus {
+    background-color: var(--vermelho-escuro);
+    color: var(--texto-branco);
+}
+
+.form-control {
+    background-color: var(--cinza-escuro);
+    color: var(--texto-branco);
+    border: none;
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: #d3d3d3cc;
+}
+
+/* ==================== Acessibilidade ==================== */
+
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+/* padrão: opções escondidas */
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+/* quando mostrar, adiciona essa classe para exibir */
+.opcoes-acessibilidade.apresenta-lista {
+    display: flex;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+/* ======== Imagens responsivas e ajustadas ======== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-inicio {
+    position: absolute;
+    right: 2rem;
+    top: 15rem;
+    max-width: 40rem;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px var(--vermelho-escuro));
+}
+
+#galeria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+}
+
+.esquerda-conteudo img, #historia img {
+    max-width: 100%;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Responsividade: ajusta imagem inicial para telas pequenas */
+@media (max-width: 768px) {
+    .img-inicio {
+        position: static;
+        max-width: 100%;
+        margin: 0 auto 2rem auto;
+        display: block;
+        filter: none;
+        top: auto;
+        right: auto;
+    }
+}
