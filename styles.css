@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --vermelho-timao: #E10600; /* vermelho vibrante do Corinthians */
-    --vermelho-escuro: #9B0000; /* vermelho mais escuro para hover e sombras */
-    --preto-fundo: #000000; /* preto puro para fundo */
-    --cinza-escuro: #1A1A1A; /* cinza quase preto para seções */
-    --cinza-medio: #4D4D4D; /* cinza para formulários e fundos secundários */
-    --cinza-claro: #BFBFBF; /* texto claro para hover */
-    
-    --texto-branco: #FFFFFF; /* branco puro para texto */
+    --vermelho-timao: #E10600;
+    --vermelho-escuro: #9B0000;
+    --preto-fundo: #000000;
+    --cinza-escuro: #1A1A1A;
+    --cinza-medio: #4D4D4D;
+    --cinza-claro: #BFBFBF;
+    --texto-branco: #FFFFFF;
+
+    /* Acessibilidade */
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #ffd700;
 }
 
 body {
@@ -20,7 +24,7 @@ body {
 }
 
 header {
-    background-color: #000000cc; /* preto translúcido */
+    background-color: #000000cc;
     border-bottom: 2px solid var(--vermelho-timao);
 }
 
@@ -40,7 +44,7 @@ section {
 }
 
 .inicio-fundo {
-    background-image: url('img/arena-corinthians-bg.jpg'); /* imagem da Arena Corinthians */
+    background-image: url('img/arena-corinthians-bg.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 80px;
@@ -130,7 +134,7 @@ h2 {
 }
 
 #contato {
-    background-image: url('img/arena-corinthians-noite.jpg'); /* imagem da arena à noite */
+    background-image: url('img/arena-corinthians-noite.jpg');
     background-size: cover;
     background-position: center;
     padding: 4rem 0;
@@ -187,14 +191,12 @@ h2 {
     transform-origin: right center;
 }
 
-/* padrão: opções escondidas */
 .opcoes-acessibilidade {
     margin-top: 10px;
     display: none;
     flex-direction: column;
 }
 
-/* quando mostrar, adiciona essa classe para exibir */
 .opcoes-acessibilidade.apresenta-lista {
     display: flex;
 }
@@ -203,22 +205,49 @@ h2 {
     margin-bottom: 5px;
 }
 
+/* ======== Alto contraste ======== */
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste #historia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+}
+
 /* ======== Imagens responsivas e ajustadas ======== */
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-}
-
-.img-inicio {
-    position: absolute;
-    right: 2rem;
-    top: 15rem;
-    max-width: 40rem;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 15px var(--vermelho-escuro));
 }
 
 #galeria img {
@@ -236,7 +265,7 @@ img {
     border-radius: 15px;
 }
 
-/* Responsividade: ajusta imagem inicial para telas pequenas */
+/* Responsividade */
 @media (max-width: 768px) {
     .img-inicio {
         position: static;
