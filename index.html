@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Corinthians - O Timão</title>
-    <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-        rel="stylesheet"
-    />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -35,6 +29,10 @@
                 <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
                     <button id="aumentar-fonte" class="btn btn-primary fw-bold">A +</button>
                     <button id="diminuir-fonte" class="btn btn-primary fw-bold">A -</button>
+                    <!-- Botão de contraste adicionado -->
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alternar contraste">
+                        <i class="bi bi-shadows"></i>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -46,16 +44,9 @@
             <div class="inicio-fundo d-flex justify-content-between align-items-center">
                 <div class="esquerda-conteudo">
                     <h1 class="display-4 text-white fst-italic fw-bold">Bem-vindos ao Mundo do Corinthians</h1>
-                    <img
-                        src="img/im1.jpg"
-                        width="540"
-                        height="260"
-                        alt="Torcida do Corinthians vibrando"
-                        loading="lazy"
-                    />
+                    <img src="img/im1.jpg" width="540" height="260" alt="Torcida do Corinthians vibrando" loading="lazy" />
                     <a href="#historia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Conheça o Timão</a>
                 </div>
-               
             </div>
         </section>
 
@@ -63,14 +54,7 @@
         <section id="historia" class="my-5 pt-6">
             <div class="container d-flex align-items-center">
                 <div class="col-4 d-flex justify-content-center">
-                    <img
-                        src="img/im3.jpg"
-                        class="rounded-pill"
-                        alt="Mascote do Corinthians"
-                        width="273"
-                        height="331"
-                        loading="lazy"
-                    />
+                    <img src="img/im3.jpg" class="rounded-pill" alt="Mascote do Corinthians" width="273" height="331" loading="lazy" />
                 </div>
                 <div class="col-5">
                     <h2>Sobre o Corinthians</h2>
@@ -89,38 +73,18 @@
             <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
-                        <img
-                            src="img/im4.jpg"
-                            class="img-fluid rounded-5"
-                            alt="Jogadores do Corinthians comemorando gol"
-                            loading="lazy"
-                        />
+                        <img src="img/im4.jpg" class="img-fluid rounded-5" alt="Jogadores do Corinthians comemorando gol" loading="lazy" />
                     </div>
                     <div class="col-md-4">
-                        <img
-                            src="img/im5.jpg"
-                            class="img-fluid rounded-5"
-                            alt="Torcida na arquibancada"
-                            loading="lazy"
-                        />
+                        <img src="img/im5.jpg" class="img-fluid rounded-5" alt="Torcida na arquibancada" loading="lazy" />
                     </div>
                 </div>
                 <div class="row mt-4 justify-content-md-center">
                     <div class="col-md-4">
-                        <img
-                            src="img/im5.jpg"
-                            class="img-fluid rounded-5"
-                            alt="Cartaz oficial do Corinthians"
-                            loading="lazy"
-                        />
+                        <img src="img/im5.jpg" class="img-fluid rounded-5" alt="Cartaz oficial do Corinthians" loading="lazy" />
                     </div>
                     <div class="col-md-4">
-                        <img
-                            src="img/im2.jpg"
-                            class="img-fluid rounded-5"
-                            alt="Ídolo do Corinthians em ação"
-                            loading="lazy"
-                        />
+                        <img src="img/im2.jpg" class="img-fluid rounded-5" alt="Ídolo do Corinthians em ação" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -134,33 +98,15 @@
                     <form>
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo"
-                            />
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo" />
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email"
-                            />
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email" />
                         </div>
                         <div class="form-group mb-3">
                             <label for="mensagem">Mensagem</label>
-                            <textarea
-                                id="mensagem"
-                                name="mensagem"
-                                class="form-control rounded-4 mt-2"
-                                rows="4"
-                                placeholder="Escreva sua mensagem"
-                            ></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
                         </div>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary btn-lg rounded-pill">
@@ -181,6 +127,9 @@
         <p class="mt-3">Desenvolvido por Mayara.</p>
     </footer>
 
+    <!-- ScrollReveal + Script principal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
